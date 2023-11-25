@@ -43,6 +43,14 @@ const MovieSchema = new mongoose.Schema({
     type: [String],
     required: true,
   },
+  movieThumbImg: {
+    type: String,
+    required: true,
+  },
+  movieCoverImg: {
+    type: String,
+    required: true,
+  },
 });
 
 type MovieType = InferSchemaType<typeof MovieSchema>;

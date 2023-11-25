@@ -24,6 +24,8 @@ router.post('/', async (req, res) => {
     movieDuration: req.body.movieDuration,
     movieDirector: req.body.movieDirector,
     movieCast: req.body.movieCast,
+    movieThumbImg: req.body.movieThumbImg,
+    movieCoverImg: req.body.movieCoverImg,
   });
   await movie.save();
   res.status(200).send(movie);
@@ -42,6 +44,8 @@ router.put('/:id', validateId, async (req, res) => {
         movieDuration: req.body.movieDuration,
         movieDirector: req.body.movieDirector,
         movieCast: req.body.movieCast,
+        movieThumbImg: req.body.movieThumbImg,
+        movieCoverImg: req.body.movieCoverImg,
       },
     },
     { new: true }
